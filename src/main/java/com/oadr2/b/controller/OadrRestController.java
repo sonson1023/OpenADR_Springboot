@@ -24,11 +24,11 @@ import com.oadr2.b.services.OadrHttpUtils;
 public class OadrRestController {
 	OadrHttpUtils oHttp ;
 //	@GetMapping("/oadr/eiregister")
-	@RequestMapping(value="/oadr", method=RequestMethod.GET)
-	@ResponseStatus(value=HttpStatus.OK)
-	public String register() {
-		return "SUCCESS";
-	}
+//	@RequestMapping(value="/oadr", method=RequestMethod.GET)
+//	@ResponseStatus(value=HttpStatus.OK)
+//	public String register() {
+//		return "SUCCESS";
+//	}
 	
 	@CrossOrigin("*")
 	@RequestMapping(value="/eiregister", method=RequestMethod.POST)
@@ -42,7 +42,7 @@ public class OadrRestController {
 		oHttp = new OadrHttpUtils(vtnIP);
 		OadrQueryRegistration query = new OadrQueryRegistration();
 		query.setRequestID(UUID.randomUUID().toString());
-		query.setSchemaVersion("2.0B");
+		query.setSchemaVersion("2.0B");  
 		//
 		
 		
